@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import src.view.GUI;
 import src.model.Algoritmo;
 
+/* 
+ * 
+ * Controller
+ * Criado por Marcos Antônio :P
+ * 
+ */
+
 public class Controller {
 
     private Algoritmo algoritmo;

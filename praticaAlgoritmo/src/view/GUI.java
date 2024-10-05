@@ -11,16 +11,16 @@ public class GUI {
     }
 
     public int getOptionSelection(ArrayList<String> options){
-
+        printMessage("Escolha uma das opções: ");
         for(int i = 0; i < options.size(); i++){
             System.out.println("Opção " + (i + 1) + ": " + options.get(i));
         }
-        return getInt("Escolha uma das opções: ");
+        return getInt();
     }
 
-    public ArrayList<Integer> criarVetor(int n){
+    public ArrayList<Integer> criarVetor(int n){ //retornar um vetor de tamanho n preenchido com entrada
         ArrayList<Integer> vetor = new ArrayList<>();
-        System.out.println("* Criação de vetor *");
+        printMessage("* Criação de vetor *");
         for(int i = 0; i < n; i++){
             int num = getInt("Digite o número " + i + ": ");
             vetor.add(num);
@@ -28,15 +28,20 @@ public class GUI {
         return vetor;
     }
 
-    public int getInt(String message){
+    public int getInt(String message){ //getInt com mensagem
         String numeroTxt = getString(message);
         int nInt = Integer.parseInt(numeroTxt);
         return nInt;
     }
+    public int getInt(){ //getInt sem mensagem
+        String numeroTxt = leitor.nextLine();
+        int nInt = Integer.parseInt(numeroTxt);
+        return nInt;
+    }
+
 
     public String getString(String message){
         System.out.println(message);
-        //leitor.next(); //Consumir o \n
         String texto = leitor.nextLine();
         return texto;
     }
