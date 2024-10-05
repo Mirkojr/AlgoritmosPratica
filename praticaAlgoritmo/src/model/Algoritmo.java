@@ -1,3 +1,4 @@
+package src.model;
 import java.util.ArrayList;
 /* 
  * 
